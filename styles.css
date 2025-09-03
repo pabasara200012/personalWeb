@@ -1568,23 +1568,44 @@ section {
 
 @media (max-width: 768px) {
     .navbar {
-        height: 70px;
+        height: 60px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.15);
+        z-index: 1100;
     }
-    
+
     .hero {
-        padding: calc(70px + var(--spacing-xl)) 0 var(--spacing-2xl);
+        padding: 80px 0 var(--spacing-2xl);
+        min-height: auto;
+        position: relative;
     }
-    
+
+    .hero-container {
+        padding-top: 0;
+    }
+
+    .hero-content {
+        margin-top: 0;
+        z-index: 1;
+        position: relative;
+    }
+
+    .profile-card {
+        margin-top: 0;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+        position: relative;
+        z-index: 2;
+    }
+
     .nav-container {
         padding: 0 var(--spacing-md);
     }
-    
+
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 60px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 60px);
         background: var(--bg-primary) !important;
         backdrop-filter: blur(30px);
         flex-direction: column;
@@ -1592,8 +1613,8 @@ section {
         align-items: center;
         transition: var(--transition-normal);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        gap: var(--spacing-xl);
-        z-index: 999;
+        gap: var(--spacing-lg);
+        z-index: 1099;
     }
 
     .nav-menu.active {
@@ -1601,12 +1622,12 @@ section {
     }
 
     .nav-menu .nav-link {
-        font-size: var(--font-size-lg);
-        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: var(--font-size-base);
+        padding: var(--spacing-sm) var(--spacing-lg);
         margin: 0;
         text-align: center;
-        width: 200px;
-        border-radius: var(--border-radius-lg);
+        width: 160px;
+        border-radius: var(--border-radius);
         background: var(--bg-card) !important;
         border: 1px solid rgba(255, 255, 255, 0.1);
         color: var(--text-secondary) !important;
@@ -1616,7 +1637,7 @@ section {
     .nav-menu .nav-link.active {
         background: rgba(255, 107, 107, 0.2) !important;
         border-color: var(--accent-primary);
-        transform: scale(1.05);
+        transform: scale(1.02);
         color: var(--text-primary) !important;
     }
 
@@ -1624,13 +1645,8 @@ section {
         display: flex;
     }
 
-    .hero {
-        padding: var(--spacing-3xl) 0 var(--spacing-2xl);
-        min-height: auto;
-    }
-
     .hero-name {
-        font-size: var(--font-size-4xl);
+        font-size: var(--font-size-3xl);
     }
 
     .hero-title {
@@ -1662,13 +1678,16 @@ section {
     }
 
     .profile-image img {
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
     }
     
     .profile-card {
-        padding: var(--spacing-lg);
-        margin: 0 var(--spacing-md);
+        padding: var(--spacing-md);
+        margin: 0 var(--spacing-sm);
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .section-title {
@@ -1746,11 +1765,11 @@ section {
     }
     
     .hero {
-        padding: var(--spacing-2xl) 0;
+        padding: 70px 0 var(--spacing-xl);
     }
     
     .hero-name {
-        font-size: var(--font-size-3xl);
+        font-size: var(--font-size-2xl);
         line-height: 1.2;
     }
 
@@ -1871,9 +1890,16 @@ section {
         height: 120px;
     }
     
+    .profile-card {
+        padding: var(--spacing-sm);
+        margin: 0;
+        max-width: 260px;
+    }
+    
     .nav-menu .nav-link {
-        width: 160px;
-        font-size: var(--font-size-base);
+        width: 140px;
+        font-size: var(--font-size-sm);
+        padding: var(--spacing-xs) var(--spacing-md);
     }
     
     .section-title {
